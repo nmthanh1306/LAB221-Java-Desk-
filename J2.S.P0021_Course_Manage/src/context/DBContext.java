@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Minh Thanh
  */
 public class DBContext {
-
+    
     public Connection getConnection() throws Exception {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         String url = ("jdbc:sqlserver://"
