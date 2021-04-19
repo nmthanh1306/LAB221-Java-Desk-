@@ -34,7 +34,7 @@ public class TableStockController {
         addDataToTable();
 
         t.getTblStock().setRowSelectionInterval(0, 0);
-        isEnableBtn();
+        enableBtn();
 
         // move first
         t.getBtnMoveFirst().addActionListener(new ActionListener() {
@@ -42,7 +42,7 @@ public class TableStockController {
             public void actionPerformed(ActionEvent e) {
 
                 t.getTblStock().setRowSelectionInterval(0, 0);
-                isEnableBtn();
+                enableBtn();
 
             }
         });
@@ -53,7 +53,7 @@ public class TableStockController {
             public void actionPerformed(ActionEvent e) {
 
                 t.getTblStock().setRowSelectionInterval(vctData.size() - 1, vctData.size() - 1);
-                isEnableBtn();
+                enableBtn();
 
             }
         });
@@ -70,7 +70,7 @@ public class TableStockController {
 //                    t.getTblStock().setRowSelectionInterval(selectedRow + 1, selectedRow + 1);
 //                }
                 t.getTblStock().setRowSelectionInterval(selectedRow + 1, selectedRow + 1);
-                isEnableBtn();
+                enableBtn();
             }
         });
 
@@ -80,13 +80,13 @@ public class TableStockController {
             public void actionPerformed(ActionEvent e) {
 
                 t.getTblStock().setRowSelectionInterval(selectedRow - 1, selectedRow - 1);
-                isEnableBtn();
+                enableBtn();
             }
         });
 
     }
 
-    public void isEnableBtn() {
+    public void enableBtn() {
         // mouse event
         t.getTblStock().getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
